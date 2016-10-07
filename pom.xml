@@ -1,0 +1,11 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.normalisiert.utils</groupId>
+    <artifactId>graphs</artifactId>
+
+    <name>Johnson Algorithm</name>
+
+    <description>find all circuits of a directed graph using johnson's algorithm and java implementation by frank meyer</description>
+
+</project>
