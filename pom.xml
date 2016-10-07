@@ -5,6 +5,7 @@
     <artifactId>graphs</artifactId>
 
     <name>Johnson Algorithm</name>
+    <version>1.0.0-SNAPSHOT</version>
 
     <description>find all circuits of a directed graph using johnson's algorithm and java implementation by frank meyer</description>
 
