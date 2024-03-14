@@ -11,11 +11,19 @@ Usage
 -----
 
     make
-    echo "0 1\n0 2\n1 0\n1 3\n2 0\n3 0\n3 1\n3 2" | java de.normalisiert.utils.graphs.TestCycles 4
+    echo -e "0 1\n0 2\n1 0\n1 3\n2 0\n3 0\n3 1\n3 2" | java de.normalisiert.utils.graphs.TestCycles 4
 
 First argument is the number of vertices. Ordered pairs of space separated
 vertices are given via standard input and make up the directed edges of the
 graph.
+
+The output you should expect is:
+
+    0 1
+    0 1 3
+    0 1 3 2
+    0 2
+    1 3
 
 DOT file input
 --------------
