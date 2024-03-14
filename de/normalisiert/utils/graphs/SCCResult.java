@@ -16,7 +16,7 @@ public class SCCResult {
 		if (this.adjList != null) {
 			for (int i = this.lowestNodeId; i < this.adjList.length; i++) {
 				if (this.adjList[i].size() > 0) {
-					this.nodeIDsOfSCC.add(new Integer(i));
+					this.nodeIDsOfSCC.add(Integer.valueOf(i));
 				}
 			}
 		}
