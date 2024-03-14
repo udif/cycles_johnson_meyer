@@ -13,6 +13,8 @@ Usage
     make
     echo -e "0 1\n0 2\n1 0\n1 3\n2 0\n3 0\n3 1\n3 2" | java de.normalisiert.utils.graphs.TestCycles 4
 
+You can also use `printf` instead of `echo -e` if your shell does not support the `-e` argument.
+
 First argument is the number of vertices. Ordered pairs of space separated
 vertices are given via standard input and make up the directed edges of the
 graph.
