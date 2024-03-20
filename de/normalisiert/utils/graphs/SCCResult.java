@@ -1,18 +1,22 @@
 package de.normalisiert.utils.graphs;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Vector;
+//import java.util.HashSet;
+//import java.util.Set;
+import java.util.List;
 
 public class SCCResult {
-	private Set nodeIDsOfSCC = null;
-	private Vector[] adjList = null;
+	//private Set nodeIDsOfSCC = null;
+	private List[] adjList = null;
 	private int lowestNodeId = -1;
 	
-	public SCCResult(Vector[] adjList, int lowestNodeId) {
+	public SCCResult(List[] adjList, int lowestNodeId) {
 		this.adjList = adjList;
 		this.lowestNodeId = lowestNodeId;
-		this.nodeIDsOfSCC = new HashSet();
+		//this.nodeIDsOfSCC = new HashSet();
+		/*
+		//
+		// All this just to create a Set we don't use
+		//
 		if (this.adjList != null) {
 			for (int i = this.lowestNodeId; i < this.adjList.length; i++) {
 				if (this.adjList[i].size() > 0) {
@@ -20,9 +24,10 @@ public class SCCResult {
 				}
 			}
 		}
+		*/
 	}
 
-	public Vector[] getAdjList() {
+	public List[] getAdjList() {
 		return adjList;
 	}
 

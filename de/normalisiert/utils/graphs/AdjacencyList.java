@@ -1,6 +1,7 @@
 package de.normalisiert.utils.graphs;
 
-import java.util.Vector;
+import java.util.List;
+import java.util.ArrayList;
 
 
 /**
@@ -26,7 +27,7 @@ public class AdjacencyList {
 		int[][] list = new int[adjacencyMatrix.length][];
 
 		for (int i = 0; i < adjacencyMatrix.length; i++) {
-			Vector v = new Vector();
+			List<Integer> v = new ArrayList<Integer>();
 			for (int j = 0; j < adjacencyMatrix[i].length; j++) {
 				if (adjacencyMatrix[i][j]) {
 					v.add(Integer.valueOf(j));
@@ -35,8 +36,7 @@ public class AdjacencyList {
 
 			list[i] = new int[v.size()];
 			for (int j = 0; j < v.size(); j++) {
-				Integer in = (Integer) v.get(j);
-				list[i][j] = in.intValue();
+				list[i][j] = v.get(j).intValue();
 			}
 		}
 		
