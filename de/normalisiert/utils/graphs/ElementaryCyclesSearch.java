@@ -43,10 +43,10 @@ public class ElementaryCyclesSearch {
 	private boolean[] blocked = null;
 
 	/** B-Lists, used by the algorithm of Johnson */
-	private List[] B = null;
+	private ArrayListInteger[] B = null;
 
 	/** Stack for nodes, used by the algorithm of Johnson */
-	private List stack = null;
+	private List<Integer> stack = null;
 
 	/**
 	 * Constructor.
@@ -70,20 +70,20 @@ public class ElementaryCyclesSearch {
 	public List<List<Object>> getElementaryCycles() {
 		this.cycles = new ArrayList<List<Object>>();
 		this.blocked = new boolean[this.adjList.length];
-		this.B = new ArrayList[this.adjList.length];
-		this.stack = new ArrayList();
+		this.B = new ArrayListInteger[this.adjList.length];
+		this.stack = new ArrayList<Integer>();
 		StrongConnectedComponents sccs = new StrongConnectedComponents(this.adjList);
 		int s = 0;
 
 		while (true) {
 			SCCResult sccResult = sccs.getAdjacencyList(s);
 			if (sccResult != null && sccResult.getAdjList() != null) {
-				List[] scc = sccResult.getAdjList();
+				ArrayListInteger[] scc = sccResult.getAdjList();
 				s = sccResult.getLowestNodeId();
 				for (int j = 0; j < scc.length; j++) {
 					if ((scc[j] != null) && (scc[j].size() > 0)) {
 						this.blocked[j] = false;
-						this.B[j] = new ArrayList();
+						this.B[j] = new ArrayListInteger();
 					}
 				}
 
@@ -107,7 +107,7 @@ public class ElementaryCyclesSearch {
 	 * connected component s is part of.
 	 * @return true, if cycle found; false otherwise
 	 */
-	private boolean findCycles(int v, int s, List[] adjList) {
+	private boolean findCycles(int v, int s, ArrayListInteger[] adjList) {
 		boolean f = false;
 		this.stack.add(Integer.valueOf(v));
 		this.blocked[v] = true;
@@ -152,7 +152,7 @@ public class ElementaryCyclesSearch {
 	 */
 	private void unblock(int node) {
 		this.blocked[node] = false;
-		List Bnode = this.B[node];
+		ArrayList<Integer> Bnode = this.B[node];
 		while (Bnode.size() > 0) {
 			Integer w = (Integer) Bnode.get(0);
 			Bnode.remove(0);
