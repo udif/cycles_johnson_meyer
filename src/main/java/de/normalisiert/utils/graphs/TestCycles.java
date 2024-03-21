@@ -1,9 +1,7 @@
 package de.normalisiert.utils.graphs;
 
-
 import java.util.List;
 import java.io.*;
-
 
 /**
  * Testfile for elementary cycle search.

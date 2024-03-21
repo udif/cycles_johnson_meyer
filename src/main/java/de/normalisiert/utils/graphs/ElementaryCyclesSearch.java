@@ -141,6 +141,9 @@ public class ElementaryCyclesSearch {
 			}
 		}
 
+		// Notice the argument is an Integer object, not an int
+		// This means that the value of v is removed from stack,
+		// not the item at index v
 		this.stack.remove(Integer.valueOf(v));
 		return f;
 	}

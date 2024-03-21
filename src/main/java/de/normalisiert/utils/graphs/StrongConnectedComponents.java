@@ -79,7 +79,8 @@ public class StrongConnectedComponents {
 		this.visited = new boolean[this.adjListOriginal.length];
 		this.lowlink = new int[this.adjListOriginal.length];
 		this.number = new int[this.adjListOriginal.length];
-		this.visited = new boolean[this.adjListOriginal.length];
+		// Duplicated by mistake
+		//this.visited = new boolean[this.adjListOriginal.length];
 		this.stack = new ArrayList<Integer>();
 		this.currentSCCs = new ArrayList<List<Integer>>();
 
